@@ -4,7 +4,7 @@ import TextInput from '../TextInput/TextInput';
 const SearchForm = () => {
   return (
     <form className={styles.searchForm}>
-      <TextInput />
+      <TextInput placeholder='Search…' />
       <button className={styles.button}>Search</button>
     </form>
   );
