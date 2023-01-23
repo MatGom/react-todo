@@ -1,0 +1,16 @@
+@import '../../styles/settings.scss';
+
+.cardForm {
+  input {
+    border-color: $color-success;
+  }
+}
+
+@media (max-width: 1126px) {
+  .cardForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
