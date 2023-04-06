@@ -4,6 +4,10 @@
   margin-top: -1.5em;
   background-color: darken($color-dark, 3%);
 
+  .linkActive {
+    color: $color-warning;
+  }
+
   &Wrapper {
     display: flex;
     justify-content: space-between;
@@ -16,7 +20,7 @@
       transition: $transition;
 
       &:hover {
-        color: $color-success;
+        color: $color-warning;
       }
     }
 
@@ -37,7 +41,7 @@
         transition: $transition;
 
         &:hover {
-          color: $color-success;
+          color: $color-warning;
         }
       }
     }
