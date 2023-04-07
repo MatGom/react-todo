@@ -1,17 +1,44 @@
+@use 'sass:math';
 @import '../../styles/settings.scss';
 
 .favorite {
   padding: $base-size;
 }
 
-.subtitle {
+.noCards {
   padding: ($base-size * 2) 0;
   text-align: center;
-  font-size: ($base-size * 2);
-  font-style: italic;
+  font-size: ($base-size * 2.5);
   font-weight: normal;
+  text-transform: uppercase;
+  color: $color-warning;
 }
 
-.title + .subtitle {
+.favorite + .noCards {
   margin-top: (-$base-size * 3);
+}
+
+.favoriteColumn {
+  width: calc(40% - 12px);
+  background: $color-light;
+  margin: 0 $base-size $base-size 0;
+  padding: ($base-size * 1.5);
+  border-radius: $radius;
+  box-shadow: 0 math.div($base-size, 4) 0 rgba(0, 0, 0, 0.3);
+  color: $color-dark;
+
+  &:last-child {
+    margin: auto auto $base-size auto;
+  }
+}
+
+.favoriteCards {
+  padding: math.div($base-size, 2) 0;
+}
+
+@media (max-width: 767px) {
+  .column {
+    width: 100%;
+    margin: 0 0 $base-size 0;
+  }
 }

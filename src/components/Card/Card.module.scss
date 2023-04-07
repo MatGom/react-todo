@@ -10,4 +10,17 @@
   display: flex;
   justify-content: space-between;
   font-weight: bold;
+
+  span {
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      color: $color-warning;
+    }
+  }
+
+  .isActive {
+    color: $color-warning;
+  }
 }
