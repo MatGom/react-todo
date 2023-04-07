@@ -2,18 +2,14 @@ import styles from './Favorite.module.scss';
 import PageTitle from '../PageTitle/PageTitle';
 import Card from '../Card/Card';
 import { useSelector } from 'react-redux';
-import { getFavoriteCards } from '../../redux/store';
+import { getFavoriteCards } from '../../redux/cardsRedux';
 
 const Favorite = props => {
   const favoriteCards = useSelector(state => getFavoriteCards(state));
 
   let content;
   if (favoriteCards.length === 0) {
-    content = (
-      <>
-        <p className={styles.noCards}>No cards added!</p>
-      </>
-    );
+    content = <p className={styles.noCards}>No cards added!</p>;
   } else {
     content = favoriteCards.map(favoriteCard => (
       <Card
