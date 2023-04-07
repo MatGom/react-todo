@@ -12,15 +12,21 @@
   font-weight: bold;
 
   span {
+    opacity: 0.9;
     cursor: pointer;
-    transition: $transition;
 
-    &:hover {
+    .trash {
+      margin-left: 6px;
+      transition: $transition;
+
+      &:hover {
+        opacity: 1;
+        color: red;
+      }
+    }
+
+    .isActive {
       color: $color-warning;
     }
-  }
-
-  .isActive {
-    color: $color-warning;
   }
 }
